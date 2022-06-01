@@ -48,7 +48,7 @@ Ambisafe.Account = function (container, password) {
     this.data = {};
 
     for (property in container) {
-        if (container.hasOwnProperty(property)) {
+        if (Object.prototype.hasOwnProperty.call(container, property)) {
             this.set(property, container[property]);
         }
     }
